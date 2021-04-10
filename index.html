@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Loja</title>
+
+<!-- estilos -->
+<script src="https://use.fontawesome.com/b1fa1fbd7d.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<link rel="shortcut icon" href="imagens/pp.jpg" type="image/x-icon">
+
+
+
+<!-- script -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+<script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+
+<style>
+    @font-face {
+        font-family: Supersonic;
+        src: url(fontes/Supersonic.ttf)
+    }
+
+    @font-face {
+        font-family: aAmenityKits;
+        src: url(fontes/aAmenityKits.ttf)
+    }
+
+    #menu {
+        background-color: rgba(255, 255, 255, 0.672);
+        height: 60px;
+        padding-top: 10px;
+    }
+
+    #tituloCabecalho {
+        font-family: Supersonic;
+        font-size: 30px;
+        margin-left: 20px;
+        color: #df70b1;
+        display: inline;
+        border: solid 1px #df70b1;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    #fotos {
+        margin-top: 100px;
+    }
+
+    .bloco {
+        width: 35%;
+        border-radius: 10px;
+
+
+    }
+
+    .produtos {
+        background-color: white;
+        margin: 20px;
+        border-radius: 10px;
+    }
+
+    .produto {
+        background-color: #4b4b4b;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+        margin-left: 0px;
+
+    }
+
+    .textoTitulo {
+        font-size: 22px;
+        margin-top: -9px;
+    }
+
+    .textoCategoria {
+        color: #df70b1;
+        margin: 0;
+        font-family: Supersonic;
+        font-size: 26px;
+    }
+
+    .valor {
+        font-family: aAmenityKits;
+        font-size: 46px;
+    }
+
+    .pedido {
+        background-color: blueviolet;
+        padding: 5px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .disponivel {
+        color: rgb(41, 158, 55);
+        padding: 2px;
+        background-color: #eef2f1;
+        border-radius: 5px;
+        display: inline;
+
+
+
+    }
+
+    span {
+        background-color: #eef2f1;
+        border-radius: 5px;
+        padding: 5px;
+
+
+    }
+
+    .navegacao {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    #rodape{
+        background-color: white;
+        padding-right: 0px;
+    }
+    #rodapeMenu{
+        width: 100%;
+        height: 40px;
+        background-color: rgba(137, 43, 226, 0);
+        padding-top: 15px;
+        
+    }
+    .botaoMenu{
+        text-decoration: none;
+        background-color: blueviolet;
+        color: #eef2f1;
+        width: 100%;
+        border-radius: 0px;      
+        border-radius: 10px;
+    }
+
+    #cardapio{
+        font-family: Supersonic;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bolder;
+        border-bottom: solid 1px #df70b1;
+        width: 25%;
+        margin: auto;
+        margin-bottom: 15px;
+        
+    }
+    #instagram{
+        color:#df70b1; 
+        font-size: 40px; 
+        margin-right: 10px;
+    }
+
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+
+    #instagram:hover{
+        animation-name: spin;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+   
+</style>
+
+</head>
+
+<body style="background-color: #eef2f1;">
+
+    <div id="menu" class="fixed-top">
+        <strong>
+            <p id="tituloCabecalho">Doces da Sthe</p>
+        </strong>
+        <i class="fa fa-instagram float-right" id="instagram" aria-hidden="true"></i><br>
+            
+            
+    </div>
+
+    <div class="container-xl fixed-bottom">
+        <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+            <div id="rodape" class="col-sm-12" align="center">
+                <div id="rodapeMenu">
+                    <p style="font-family: Supersonic; font-size: 20px;">18 99681-5321</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="imagens/sthe.png" alt="" class="fixed-bottom" style="width: 100px; margin:auto;">
+
+    <div class="container-xl" id="fotos">
+        <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+            <img src="imagens/torta.jpeg" class=" m-2 bloco">
+
+            <img src="imagens/tortamorango.jpeg" class=" m-2 bloco">
+
+        </div>
+    </div>
+    <hr style="width: 50%;">
+    <p id="cardapio">Cardápio</p>
+
+    <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link botaoMenu" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Copo da Felicidade
+              </button>
+            </h5>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="card-body">
+                <div class="container-xl" class="produtos">
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-5 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    
+            
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed botaoMenu" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Mouse
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div class="card-body">
+                <div class="container-xl" class="produtos">
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-5 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    
+            
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed botaoMenu" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Gelados
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div class="card-body">
+                <div class="container-xl" class="produtos">
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-5 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    
+            
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingFour">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed botaoMenu" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Bolo no Pote
+                </button>
+              </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                <div class="container-xl" class="produtos">
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    <hr>
+            
+                    <div class="form-group row justify-content-center mr-0 mb-5 p-0">
+                        <div class="col-5 m-2">
+                            <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                            <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                            <img src="imagens/doce.jpeg" class="produto">
+            
+                        </div>
+                        <div class="col-5 m-2">
+            
+                            <strong>Ingredientes</strong>
+                            <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                            <p class="disponivel">Disponível</p><br>
+            
+                            <strong class="valor">$18,00</strong>
+            
+                            <p class="pedido">Fazer Pedido</p>
+            
+                        </div>
+            
+                    </div>
+            
+                    
+            
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+ 
+
+    <!--
+    <div class="container-xl" id="produtos">
+        <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+            <div class="col-sm-5 m-2">
+                <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                <img src="doce.jpeg" class="produto">
+
+            </div>
+            <div class="col-sm-5 m-2">
+
+                <strong>Ingredientes</strong>
+                <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                <p class="disponivel">Disponível</p><br>
+
+                <strong class="valor">$18,00</strong>
+
+                <p class="pedido">Fazer Pedido</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="form-group row justify-content-center mr-0 mb-0 p-0">
+            <div class="col-sm-5 m-2">
+                <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                <img src="doce.jpeg" class="produto">
+
+            </div>
+            <div class="col-sm-5 m-2">
+
+                <strong>Ingredientes</strong>
+                <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                <p class="disponivel">Disponível</p><br>
+
+                <strong class="valor">$18,00</strong>
+
+                <p class="pedido">Fazer Pedido</p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="form-group row justify-content-center mr-0 mb-5 p-0">
+            <div class="col-sm-5 m-2">
+                <p class="textoCategoria"><strong>Copo da Felicidade</strong></p>
+                <p class="textoTitulo"><strong>Ninho com Nutela</strong></p>
+                <img src="doce.jpeg" class="produto">
+
+            </div>
+            <div class="col-sm-5 m-2">
+
+                <strong>Ingredientes</strong>
+                <p class="mb-5">Chocolate, creme de ninho, morango</p>
+                <p class="disponivel">Disponível</p><br>
+
+                <strong class="valor">$18,00</strong>
+
+                <p class="pedido">Fazer Pedido</p>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+-->
+
+</body>
+
+</html>
